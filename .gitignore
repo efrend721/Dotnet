@@ -1,0 +1,31 @@
+## .NET
+bin/
+obj/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+*.userprefs
+
+## Build results
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+
+## NuGet
+**/[Pp]ackages/*
+*.nupkg
+**/packages/
+project.lock.json
+project.fragment.lock.json
+
+## VS Code
+.vscode/
+
+## OS files
+.DS_Store
+Thumbs.db
+
+## Zip files (optional, remove if you want to track them)
+*.zip
