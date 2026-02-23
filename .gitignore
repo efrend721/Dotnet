@@ -29,3 +29,5 @@ Thumbs.db
 
 ## Zip files (optional, remove if you want to track them)
 *.zip
+## Comandos para push nuevos proyectos.
+comandosGit.txt
