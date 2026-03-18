@@ -1,11 +1,33 @@
-﻿Random dice = new Random();
-int roll1 = dice.Next();
-int roll2 = dice.Next(101);
-int roll3 = dice.Next(50, 101);
+﻿using   System;
+using   System.Collections.Generic;
 
-Console.WriteLine($"First roll: {roll1}");
-Console.WriteLine($"Second roll: {roll2}");
-Console.WriteLine($"Third roll: {roll3}");
+string permission = "Admin|Manager" ;
+int level = 40;
 
 
-
+if (permission.Contains("Admin"))
+{
+    if (level > 55)
+    {
+        Console.WriteLine("Welcome, Super Admin user.");
+    }
+    else
+    {
+        Console.WriteLine("Welcome, Admin user.");
+    }
+}
+else if (permission.Contains("Manager"))
+{
+    if (level >= 20)
+    {
+        Console.WriteLine("Contact an Admin for access.");
+    }
+    else
+    {
+        Console.WriteLine("You do not have sufficient privileges.");
+    }
+}
+else
+{
+    Console.WriteLine("You do not have sufficient privileges.");
+}
