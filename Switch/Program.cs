@@ -1,28 +1,38 @@
-﻿namespace Switch
+﻿using System.Transactions;
+
+namespace Switch
 {
     class Program
     {
         static void Main()
         {
-            
-            for (int x = 1 ; x < 101; x++)
+            string? readInput;
+            int numericValue = 0;
+            bool validNumber = false;
+            bool isAccepted = false ;
+            Console.WriteLine("Enter a nteger value between 5 and 10");
+            do
             {
-                if (x % 3 == 0 && x % 5 == 0)
+                readInput = Console.ReadLine();
+                validNumber = int.TryParse(readInput, out numericValue);
+
+                if (validNumber)
                 {
-                    Console.WriteLine($"{x} FizzBuzz ");
+                    if(numericValue >= 5 && numericValue <= 10)
+                    {
+                        Console.WriteLine($"Your input value {numericValue} has been accepted.") ;
+                        isAccepted = true;
+                    }
+                    else
+                    {
+                        Console.WriteLine ($"You entered {numericValue}. Please enter a number between 5 and 10.");
+                    }
                 }
-                else if (x % 3 == 0)
+                else
                 {
-                    Console.WriteLine($"{x} Fizz ");
+                  Console.WriteLine ("Enter an integer value between 5 and 10")  ;
                 }
-                else if (x % 5 == 0)
-                {
-                    Console.WriteLine($"{x} Buzz");
-                }
-                else{ 
-                Console.WriteLine(x);
-                }
-            }
+            }while (isAccepted == false);
         }
     }
 }
